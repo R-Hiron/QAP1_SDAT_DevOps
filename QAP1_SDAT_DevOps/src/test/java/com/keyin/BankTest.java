@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class BankTest {
 
     @Test
-    void testAddCustomerAndOpenAccount() {
+    public void testAddCustomerAndOpenAccount() {
         Bank bank = new Bank();
         Customer customer = new Customer("CUST1001", "Jane Smith", "jane.smith@example.com");
         bank.addCustomer(customer);
@@ -20,7 +20,7 @@ public class BankTest {
     }
 
     @Test
-    void testOpenAccountWithInvalidCustomer() {
+    public void testOpenAccountWithInvalidCustomer() {
         Bank bank = new Bank();
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             bank.openAccount("ACC1003", "CUST9999");
@@ -29,7 +29,7 @@ public class BankTest {
     }
 
     @Test
-    void testCloseAccount() {
+    public void testCloseAccount() {
         Bank bank = new Bank();
         Customer customer = new Customer("CUST1004", "Eve", "eve@example.com");
         bank.addCustomer(customer);
@@ -42,7 +42,7 @@ public class BankTest {
     }
 
     @Test
-    void testListAccounts() {
+    public void testListAccounts() {
         Bank bank = new Bank();
         bank.listAccounts();
 

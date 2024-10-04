@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AccountTest {
 
     @Test
-    void testDeposit() {
+    public void testDeposit() {
         Customer customer = new Customer("CUST1001", "John Doe", "john.doe@example.com");
         Account account = new Account("ACC1001", customer);
 
@@ -21,7 +21,7 @@ public class AccountTest {
     }
 
     @Test
-    void testWithdraw() {
+    public void testWithdraw() {
         Customer customer = new Customer("CUST1001", "John Doe", "john.doe@example.com");
         Account account = new Account("ACC1001", customer);
         account.deposit(200.0);
